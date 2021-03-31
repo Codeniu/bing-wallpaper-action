@@ -39,8 +39,12 @@ async function main() {
     console.log("JSON data is saved.");
   });
 
-  await fs.copyFile("./template/index.html", `./dist/index.html`, () => {});
-  await fs.copyFile("./template/page.js", `./dist/page.js`, () => {});
+  await fs.copyFile("./template/index.html", `./dist/index.html`, (err) => {
+    console.log(err);
+  });
+  await fs.copyFile("./template/page.js", `./dist/page.js`, (err) => {
+    console.log(err);
+  });
   console.log(`successfully copy asset files`);
 }
 
