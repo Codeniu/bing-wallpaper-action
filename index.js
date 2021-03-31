@@ -32,7 +32,7 @@ async function main() {
   await fs.mkdir("./dist", {}, () => {});
   console.log(`successfully create ./dist`);
 
-  await fs.writeFile("data.json", JSON.stringify(result), (err) => {
+  await fs.writeFile("./dist/data.json", JSON.stringify(result), (err) => {
     if (err) {
       throw err;
     }

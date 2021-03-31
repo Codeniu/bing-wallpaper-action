@@ -1,4 +1,4 @@
-fetch("../data.json").then(async function (response) {
+fetch("./data.json").then(async function (response) {
   console.log(response.ok);
   const res = await response.json();
   const baseUrl = "https://cn.bing.com";
