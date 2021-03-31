@@ -19,6 +19,8 @@ jobs:
         run: npm install
       - name: Build
         run: node index.js
+      - name: Show Log
+        run: ls
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
