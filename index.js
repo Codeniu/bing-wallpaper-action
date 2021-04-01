@@ -1,20 +1,11 @@
 const fetch = require("node-fetch");
 const fs = require("fs/promises");
+const { url } = require("./bing");
 
 async function main() {
-  const format = "js";
-  const idx = "0";
-  const n = "1";
-  const mkt = "zh-CN";
-  const baseUrl = "https://cn.bing.com";
-
-  const imgUrl =
-    baseUrl +
-    "/HPImageArchive.aspx?" +
-    `format=${format}&idx=${idx}&n=${n}&mkt=${mkt}`;
   const options = {};
 
-  const response = await fetch(imgUrl, options);
+  const response = await fetch(url, options);
 
   if (response.status < 200 || response.status >= 300) {
     throw new Error("wrong status code");
