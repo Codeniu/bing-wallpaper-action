@@ -1,3 +1,5 @@
+# A Github Action Example
+
 Get daily Bing Wallpaper with Github Action.
 
 Bing Wallpaper API 的使用：
