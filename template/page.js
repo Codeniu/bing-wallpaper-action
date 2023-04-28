@@ -7,5 +7,5 @@ fetch('./data.json').then(async function (response) {
   let bodyElement = document.getElementsByTagName('section')[0]
   bodyElement.style.backgroundColor = '#666'
   bodyElement.style.backgroundImage = `url(${wallpaperUrl})`
-  bodyElement.innerHTML += res.title
+  bodyElement.innerHTML += `${res.title} ${res.startdate}`
 })
